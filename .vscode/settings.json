@@ -1,8 +1,29 @@
 {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     "[typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+=======
+>>>>>>> origin/task-state
+=======
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+>>>>>>> main
+=======
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+>>>>>>> origin/task-components
+=======
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+>>>>>>> origin/main
     "editor.formatOnSave": true,
     "editor.formatOnPaste": true
 }
