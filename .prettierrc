@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "experimentalTernaries": true,
     "tabWidth": 4
 =======
@@ -18,4 +19,8 @@
     "experimentalTernaries": true,
     "tabWidth": 4
 >>>>>>> origin/task-components
+=======
+    "experimentalTernaries": true,
+    "tabWidth": 4
+>>>>>>> origin/main
 }
