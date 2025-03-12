@@ -1,16 +1,23 @@
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
+<<<<<<< HEAD
 import { makeBlankQuestion } from "./objects";
+=======
+>>>>>>> origin/task-components
 
 /**
  * Consumes an array of questions and returns a new array with only the questions
  * that are `published`.
  */
 export function getPublishedQuestions(questions: Question[]): Question[] {
+<<<<<<< HEAD
     let publishedQuestions: Question[] = questions.filter(
         (question) => question.published,
     );
     return publishedQuestions;
+=======
+    return [];
+>>>>>>> origin/task-components
 }
 
 /**
@@ -19,6 +26,7 @@ export function getPublishedQuestions(questions: Question[]): Question[] {
  * `expected`, and an empty array for its `options`.
  */
 export function getNonEmptyQuestions(questions: Question[]): Question[] {
+<<<<<<< HEAD
     let nonEmpty: Question[] = questions.filter(
         (question) =>
             question.body !== "" ||
@@ -26,6 +34,9 @@ export function getNonEmptyQuestions(questions: Question[]): Question[] {
             question.options.length > 0,
     );
     return nonEmpty;
+=======
+    return [];
+>>>>>>> origin/task-components
 }
 
 /***
@@ -34,9 +45,15 @@ export function getNonEmptyQuestions(questions: Question[]): Question[] {
  */
 export function findQuestion(
     questions: Question[],
+<<<<<<< HEAD
     id: number,
 ): Question | null {
     return questions.find((question) => question.id === id) || null;
+=======
+    id: number
+): Question | null {
+    return null;
+>>>>>>> origin/task-components
 }
 
 /**
@@ -44,7 +61,11 @@ export function findQuestion(
  * with the given `id`.
  */
 export function removeQuestion(questions: Question[], id: number): Question[] {
+<<<<<<< HEAD
     return questions.filter((question) => question.id !== id);
+=======
+    return [];
+>>>>>>> origin/task-components
 }
 
 /***
@@ -52,23 +73,35 @@ export function removeQuestion(questions: Question[], id: number): Question[] {
  * questions, as an array.
  */
 export function getNames(questions: Question[]): string[] {
+<<<<<<< HEAD
     return questions.map((question) => question.name);
+=======
+    return [];
+>>>>>>> origin/task-components
 }
 
 /***
  * Consumes an array of questions and returns the sum total of all their points added together.
  */
 export function sumPoints(questions: Question[]): number {
+<<<<<<< HEAD
     return questions.reduce((total, question) => total + question.points, 0);
+=======
+    return 0;
+>>>>>>> origin/task-components
 }
 
 /***
  * Consumes an array of questions and returns the sum total of the PUBLISHED questions.
  */
 export function sumPublishedPoints(questions: Question[]): number {
+<<<<<<< HEAD
     return questions
         .filter((question) => question.published)
         .reduce((total, question) => total + question.points, 0);
+=======
+    return 0;
+>>>>>>> origin/task-components
 }
 
 /***
@@ -89,6 +122,7 @@ id,name,options,points,published
  * Check the unit tests for more examples!
  */
 export function toCSV(questions: Question[]): string {
+<<<<<<< HEAD
     const header: string = "id,name,options,points,published";
     const rows = questions.map(
         (question) =>
@@ -96,6 +130,9 @@ export function toCSV(questions: Question[]): string {
     );
 
     return [header, ...rows].join("\n");
+=======
+    return "";
+>>>>>>> origin/task-components
 }
 
 /**
@@ -104,12 +141,16 @@ export function toCSV(questions: Question[]): string {
  * making the `text` an empty string, and using false for both `submitted` and `correct`.
  */
 export function makeAnswers(questions: Question[]): Answer[] {
+<<<<<<< HEAD
     return questions.map((question) => ({
         questionId: question.id,
         text: "",
         submitted: false,
         correct: false,
     }));
+=======
+    return [];
+>>>>>>> origin/task-components
 }
 
 /***
@@ -117,7 +158,11 @@ export function makeAnswers(questions: Question[]): Answer[] {
  * each question is now published, regardless of its previous published status.
  */
 export function publishAll(questions: Question[]): Question[] {
+<<<<<<< HEAD
     return questions.map((question) => ({ ...question, published: true }));
+=======
+    return [];
+>>>>>>> origin/task-components
 }
 
 /***
@@ -125,11 +170,15 @@ export function publishAll(questions: Question[]): Question[] {
  * are the same type. They can be any type, as long as they are all the SAME type.
  */
 export function sameType(questions: Question[]): boolean {
+<<<<<<< HEAD
     if (questions.length === 0) {
         return true;
     }
     const firstType = questions[0].type;
     return questions.every((question) => question.type === firstType);
+=======
+    return false;
+>>>>>>> origin/task-components
 }
 
 /***
@@ -141,10 +190,16 @@ export function addNewQuestion(
     questions: Question[],
     id: number,
     name: string,
+<<<<<<< HEAD
     type: QuestionType,
 ): Question[] {
     let newQuestion: Question = makeBlankQuestion(id, name, type);
     return [...questions, newQuestion];
+=======
+    type: QuestionType
+): Question[] {
+    return [];
+>>>>>>> origin/task-components
 }
 
 /***
@@ -155,11 +210,17 @@ export function addNewQuestion(
 export function renameQuestionById(
     questions: Question[],
     targetId: number,
+<<<<<<< HEAD
     newName: string,
 ): Question[] {
     return questions.map((question) =>
         question.id === targetId ? { ...question, name: newName } : question,
     );
+=======
+    newName: string
+): Question[] {
+    return [];
+>>>>>>> origin/task-components
 }
 
 /***
@@ -172,6 +233,7 @@ export function renameQuestionById(
 export function changeQuestionTypeById(
     questions: Question[],
     targetId: number,
+<<<<<<< HEAD
     newQuestionType: QuestionType,
 ): Question[] {
     return questions.map((question) =>
@@ -186,6 +248,11 @@ export function changeQuestionTypeById(
             }
         :   question,
     );
+=======
+    newQuestionType: QuestionType
+): Question[] {
+    return [];
+>>>>>>> origin/task-components
 }
 
 /**
@@ -202,6 +269,7 @@ export function editOption(
     questions: Question[],
     targetId: number,
     targetOptionIndex: number,
+<<<<<<< HEAD
     newOption: string,
 ): Question[] {
     return questions.map((question) =>
@@ -217,6 +285,11 @@ export function editOption(
             }
         :   question,
     );
+=======
+    newOption: string
+) {
+    return [];
+>>>>>>> origin/task-components
 }
 
 /***
@@ -228,6 +301,7 @@ export function editOption(
 export function duplicateQuestionInArray(
     questions: Question[],
     targetId: number,
+<<<<<<< HEAD
     newId: number,
 ): Question[] {
     return questions.flatMap((question) =>
@@ -238,4 +312,9 @@ export function duplicateQuestionInArray(
             ]
         :   [question],
     );
+=======
+    newId: number
+): Question[] {
+    return [];
+>>>>>>> origin/task-components
 }
